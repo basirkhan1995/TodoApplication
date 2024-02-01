@@ -38,4 +38,12 @@ class ProviderDB extends ChangeNotifier{
     await fetchTodo();
   }
 
+  //Init
+  /// Init method, to initialize todo list on the start
+  init(){
+    fetchTodo();
+    notifyListeners();
+  }
+
+
 }

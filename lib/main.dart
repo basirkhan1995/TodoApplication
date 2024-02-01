@@ -3,6 +3,7 @@ import 'package:flutter_sqflite_provider/Provider/provider_db.dart';
 import 'package:flutter_sqflite_provider/TodoView/todo_view.dart';
 import 'package:provider/provider.dart';
 
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (BuildContext context)=> ProviderDB(),
+      create: (BuildContext context)=> ProviderDB()..init(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
